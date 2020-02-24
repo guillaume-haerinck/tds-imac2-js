@@ -108,9 +108,15 @@ export const finalArticle = generateArticleWithSignature(articleBody, sig1, "zoz
  * This is best practice, we are then certain our interface (the convention we decided to follow) is respected
  */
 
-export const genAnimal = (name, species, legs, age, furColor) => ({
-  name, species, legs, age, furColor
-})
+export const genAnimal = (name, species, legs, age, furColor) => (
+  {
+    name: name,
+    species: species,
+    legs: legs,
+    age: age,
+    furColor: furColor
+  }
+)
 
 // Create your animal of choice
 export const sampleAnimal = genAnimal("dodo", "pigeon", 2, 230, "yellow");
@@ -132,13 +138,19 @@ export const generateHen = (name, legs, age, furColor) => { return genAnimal(nam
  * We want to write the function that will take the array of hens as a parameter
  * and will return an array of their names and ages
  */
-export const hensOnlyNameAndAge = (hens) => {} // TODO
+export const hensOnlyNameAndAge = (hens) => { return hens.map((el) => {
+    return {
+      age: el.age,
+      name: el.name
+    }
+  })
+};
 
 /** 7.3
  * We want to know if our hens are alright, and aren't suffering from genetic defects affecting their legs.
  * Write the function that will take the hens as parameter and will return the names of the affected hens.
  */
-export const mutatedHens = (hens) => {} // TODO
+export const mutatedHens = (hens) => { return 0 } // TODO
 
 // 7.4
 // We want to know the average age of our animals.
