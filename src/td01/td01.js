@@ -155,7 +155,7 @@ export const mutatedHens = (hens) => { return hens.filter(el => el.legs > 2).map
 // 7.4
 // We want to know the average age of our animals.
 // Write the function that will return this average for a given array of animals
-export const averageAgeForHens = (hens) => {} // TODO
+export const averageAgeForHens = (hens) => { return hens.reduce((acc, curr) => acc + curr.age, 0) / hens.length }
 
 // 7.5
 // For reasons for simplicity of management, you're asked to only keep hens with names
