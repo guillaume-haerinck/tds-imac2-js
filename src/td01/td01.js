@@ -81,15 +81,14 @@ générative, et qui réfléchit les expériences d’apprentissage d’aujourd�
 Doué de facultés d’apprentissage automatique, le programme imaginé avec des chercheurs en analyse de l'image - régit,
 répartit et génère les signes graphiques issus d'un index constitué d'observations sur le motif de l'école d'aujourd'hui.
 Selon des critères liés aux étapes d’acquisition de la connaissance, les dessins sont ainsi décomposés, analysés,
-séquencés en grille, et enfin regénérés pour prendre vie et forme dans le nouveau bâtiment.`
+séquencés en grille, et enfin regénérés pour prendre vie et forme dans le nouveau bâtiment.`;
 
-export const sig1 = (fullName) => `${fullName} the Immortal`
-export const sig2 = (fullName) => `Definitely not ${fullName}`
-// Ok, dead memes
-export const sig3 = (fullName) => `${fullName}, First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons`
+export const sig1 = (fullName) => `${fullName} the Immortal`;
+export const sig2 = (fullName) => `Definitely not ${fullName}`;
+export const sig3 = (fullName) => `${fullName}, First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons`;
 
-export const generateArticleWithSignature = () => {} // TODO
-export const finalArticle = generateArticleWithSignature(/* ... */) // TODO
+export const generateArticleWithSignature = (article, signature, author) => { return `${article} ${signature} ${author}` };
+export const finalArticle = generateArticleWithSignature(articleBody, sig1, "zozor");
 
 /**
  * Exercice 7
@@ -114,7 +113,7 @@ export const genAnimal = (name, species, legs, age, furColor) => ({
 })
 
 // Create your animal of choice
-export const sampleAnimal = genAnimal(/* ... */)
+export const sampleAnimal = genAnimal("dodo", "pigeon", 2, 230, "yellow");
 
 // Your animal wants to change fur color, how do you propagate the changes on your created object?
 
@@ -124,7 +123,7 @@ export const sampleAnimal = genAnimal(/* ... */)
  * You will not write not instantiating an object.
  */
 
-export const generateHen = () => {} // TODO
+export const generateHen = (name, legs, age, furColor) => { return genAnimal(name, 'hen', legs, age, furColor) };
 
 /** 7.2
  * Hens have arrived! We'd like to have some kind of inventory to manage our fluffy friends.
