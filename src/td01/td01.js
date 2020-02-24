@@ -150,7 +150,7 @@ export const hensOnlyNameAndAge = (hens) => { return hens.map((el) => {
  * We want to know if our hens are alright, and aren't suffering from genetic defects affecting their legs.
  * Write the function that will take the hens as parameter and will return the names of the affected hens.
  */
-export const mutatedHens = (hens) => { return 0 } // TODO
+export const mutatedHens = (hens) => { return hens.filter(el => el.legs > 2).map(el => el.name ) };
 
 // 7.4
 // We want to know the average age of our animals.
