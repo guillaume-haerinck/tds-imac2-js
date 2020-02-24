@@ -5,14 +5,10 @@ import hens from './hens.js'
  * Convert the following to ES6, whatever the method
 */
 
-var sum = 0
-var numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+const numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+const sum = numbers.reduce((sum, x) => sum + x);
 
-for (var i = 0; i < numbers.length; ++i) {
-  sum += numbers[i]
-}
-
-export var ex1 = sum
+export const ex1 = sum;
 
 /**
  * Exercise 2
@@ -20,11 +16,11 @@ export var ex1 = sum
  * Also convert it to ES6
  */
 
-var animals1 = ['dog', 'cat', 'axolotl', 'bird']
-var animals2 = ['lion', 'squirrel', 'bear', 'pig']
+const animals1 = ['dog', 'cat', 'axolotl', 'bird']
+const animals2 = ['lion', 'squirrel', 'bear', 'pig']
 
-export var allTheAnimals = [] // TODO
-export var ex2 = allTheAnimals
+export const allTheAnimals = [...animals1, ...animals2]
+export const ex2 = allTheAnimals
 
 /**
  * Exercice 3
