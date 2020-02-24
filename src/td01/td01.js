@@ -162,7 +162,7 @@ export const averageAgeForHens = (hens) => { return hens.reduce((acc, curr) => a
 // that are 7 characters or shorter.
 // Write the function that will return these said names.
 
-export const max7CharsHens = (hens) => {} // TODO
+export const max7CharsHens = (hens) => { return hens.filter(el => el.name.length <= 7).map(el => el.name) };
 
 // 7.6
 // A very unusual client asks for a very specific hen : with red feathers, older than 15 years old
