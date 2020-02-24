@@ -16,26 +16,26 @@ export const ex1 = sum;
  * Also convert it to ES6
  */
 
-const animals1 = ['dog', 'cat', 'axolotl', 'bird']
-const animals2 = ['lion', 'squirrel', 'bear', 'pig']
+const animals1 = ['dog', 'cat', 'axolotl', 'bird'];
+const animals2 = ['lion', 'squirrel', 'bear', 'pig'];
 
-export const allTheAnimals = [...animals1, ...animals2]
-export const ex2 = allTheAnimals
+export const allTheAnimals = [...animals1, ...animals2];
+export const ex2 = allTheAnimals;
 
 /**
  * Exercice 3
  * Convert this to ES6 using **fat arrow functions**
  */
 
-function makeDogACat (thing) {
+const makeDogACat = (thing) => {
   if (thing === 'dog') {
-    return 'cat'
+    return 'cat';
   }
 
-  return thing
-}
+  return thing;
+};
 
-export var ex3 = makeDogACat
+export const ex3 = makeDogACat
 
 /**
  * Exercice 4
@@ -43,12 +43,12 @@ export var ex3 = makeDogACat
  */
 
 export function scope () {
-  const a = 'dog'
+  const a = 'dog';
   if (a === 'dog') {
-    const a = 'cat'
-    return a
+    const a = 'cat';
+    return a;
   } else {
-    return a
+    return a;
   }
 }
 
@@ -61,10 +61,10 @@ export function scope () {
  * This function will be one that increment the number passed as its argument.
  */
 
-const number = 41
-export const transformNumber = () => {} // TODO
+const number = 41;
+export const transformNumber = (num) => { return num + 1 };
 
-export const makeSomethingOutOfNumber = null // TODO
+export const makeSomethingOutOfNumber = (func, num) => { return func(num) };
 
 /**
  * Exercice 6
