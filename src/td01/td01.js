@@ -168,7 +168,7 @@ export const max7CharsHens = (hens) => { return hens.filter(el => el.name.length
 // A very unusual client asks for a very specific hen : with red feathers, older than 15 years old
 // Write a function that will find the first one corresponding to those criteria
 
-export const specificHen = (hens) => {} // TODO
+export const specificHen = (hens) => { return hens.find(el => el.age > 15 && el.furColor === 'red') };
 
 // MORE ???
 // Write a function that merges an array of objects into a single object with every key of the objects of the array
