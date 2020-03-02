@@ -7,7 +7,7 @@
  * is true for every member for the array. We'll use a function we studied last time
  */
 
-export const every = (func, arr) => { return arr.every(func) } // TODO
+export const every = (func, arr) => { return arr.every(func) }
 
 /**
  * Exercise 2
@@ -60,10 +60,10 @@ export const createTag = (name, attributes, children) => ({
  * We'll pass an empty array to `children` if there are none.
  */
 
-export const figure = () => {} // TODO
-export const figcaption = () => {} // TODO
-export const img = () => {} // TODO
-export const p = () => {} // TODO
+export const figure = (attributes, children = []) => { return createTag("figure", attributes, children) }
+export const figcaption = (attributes, children = []) => { return createTag("figcaption", attributes, children) }
+export const img = (attributes, children = []) => { return createTag("img", attributes, children) }
+export const p = (attributes, children = []) => { return createTag("p", attributes, children) }
 
 /**
  * Exercise 2.2
