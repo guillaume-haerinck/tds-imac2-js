@@ -7,7 +7,7 @@
  * is true for every member for the array. We'll use a function we studied last time
  */
 
-export const every = () => {} // TODO
+export const every = (func, arr) => { return arr.every(func) } // TODO
 
 /**
  * Exercise 2
