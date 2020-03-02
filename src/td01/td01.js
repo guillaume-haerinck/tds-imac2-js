@@ -24,7 +24,8 @@ export const ex2 = allTheAnimals;
 
 /**
  * Exercice 3
- * Convert this to ES6 using **fat arrow functions**
+ * Convert this to ES6 using **arrow functions**, and try to refactor this piece of code.
+ * The tests will directly pass, they're here to ensure the result stays the same and you haven't made a mistake
  */
 
 const makeDogACat = (thing) => {
@@ -40,6 +41,7 @@ export const ex3 = makeDogACat
 /**
  * Exercice 4
  * What value does this return?
+ * The tests will directly pass, they're here to ensure the result stays the same and you haven't made a mistake
  */
 
 export function scope () {
@@ -147,7 +149,7 @@ export const hensOnlyNameAndAge = (hens) => { return hens.map((el) => {
 };
 
 /** 7.3
- * We want to know if our hens are alright, and aren't suffering from genetic defects affecting their legs.
+ * We want to know if our hens are alright, and aren't suffering from genetic defects affecting their number of legs.
  * Write the function that will take the hens as parameter and will return the names of the affected hens.
  */
 export const mutatedHens = (hens) => { return hens.filter(el => el.legs > 2).map(el => el.name ) };
