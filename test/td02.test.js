@@ -8,7 +8,7 @@ import {
   generateMarkupForDog,
   generateMarkupForAllDogs,
   errorMessage,
-  conditionallyDisplayDogs
+  conditionnallyDisplayDogs
 } from '../src/td02/td02'
 
 import state from '../src/td02/state'
@@ -88,11 +88,11 @@ test('exercice 2.3', () => {
 
 test('exercice 2.4', () => {
   expect(
-    conditionallyDisplayDogs(true, state.dogs)).to.deep.eq(generateMarkupForAllDogs(state.dogs),
+    conditionnallyDisplayDogs(true, state.dogs)).to.deep.eq(generateMarkupForAllDogs(state.dogs),
     'User likes dogs, but their markup is not properly displayed!'
   )
   expect(
-    expect(conditionallyDisplayDogs(false, state.dogs)).to.deep.eq(errorMessage),
+    expect(conditionnallyDisplayDogs(false, state.dogs)).to.deep.eq(errorMessage),
     'User does not like dogs, but the error message is not shown!'
   )
 })

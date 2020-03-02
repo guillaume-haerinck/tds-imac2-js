@@ -103,5 +103,5 @@ export const generateMarkupForAllDogs = (dogs) => { return createTag('div', null
  * otherwise we return an error message
  */
 
-export const errorMessage = createTag(/* ... */) // TODO
-export const conditionnallyDisplayDogs = (likesDogs, dogs) => {} // TODO
+export const errorMessage = createTag('p', null, ['Dog not shown !'])
+export const conditionnallyDisplayDogs = (likesDogs, dogs) => { return likesDogs ? generateMarkupForAllDogs(dogs) : errorMessage }
