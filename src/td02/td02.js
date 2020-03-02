@@ -81,7 +81,7 @@ export const p = (attributes, children = []) => { return createTag("p", attribut
  * </figure>
  */
 
-export const generateMarkupForDog = (url, nom, description) => {} // TODO
+export const generateMarkupForDog = (url, nom, description) => { return figure(null, [img({src: url}), figcaption(null, [p(null, [nom]), p(null, [description])])]) }
 
 /** Exercise 2.3
  * Write a function which, for a list of dogs (see `./state.js`), returns a list of `figure` tags,
