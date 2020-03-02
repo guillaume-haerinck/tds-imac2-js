@@ -81,7 +81,14 @@ export const p = (attributes, children = []) => { return createTag("p", attribut
  * </figure>
  */
 
-export const generateMarkupForDog = (url, nom, description) => { return figure(null, [img({src: url}), figcaption(null, [p(null, [nom]), p(null, [description])])]) }
+export const generateMarkupForDog = (url, nom, description) => { 
+  return figure(null, [
+    img({src: url}), 
+    figcaption(null, [
+      p(null, [nom]), p(null, [description])
+    ])
+  ])
+}
 
 /** Exercise 2.3
  * Write a function which, for a list of dogs (see `./state.js`), returns a list of `figure` tags,
@@ -89,7 +96,7 @@ export const generateMarkupForDog = (url, nom, description) => { return figure(n
  * is required, the root will be a simple `div`
  */
 
-export const generateMarkupForAllDogs = (dogs) => {} // TODO
+export const generateMarkupForAllDogs = (dogs) => { return createTag('div', null, dogs.map(el => { return generateMarkupForDog(el) })) }
 
 /** Exercise 2.4
  * Now that we know how to generate the markup, we want to display it only if the user likes dogs,
