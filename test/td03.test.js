@@ -45,7 +45,7 @@ test('ex2', () => {
 
 test('ex3', () => {
   const node = ExerciseThreeView(stateThree, actionsThree)
-  expect(toStructure(node)).to.eq('main(p($),button($),button($))')
+  expect(toStructure(node)).to.eq('main(p(),button($),button($))')
   expect(stateThree.fishSize).to.eq(1)
   expect(actionsThree.increaseFishSize()(stateThree)).to.deep.eq({
     fishSize: 2

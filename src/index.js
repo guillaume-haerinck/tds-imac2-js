@@ -13,6 +13,11 @@ import exercice1View from './ex1/components/views/ExerciseOneView'
 import exercice2State from './ex2/state'
 import exercice2View from './ex2/components/views/ExerciseTwoView'
 
+// Ex3
+import exercice3Actions from './ex3/actions'
+import exercice3State from './ex3/state'
+import exercice3View from './ex3/components/views/ExerciseThreeView'
+
 /*
 La fonction app est la fonction qui sert à dessiner l'application javascript sur le navigateur
 et à la rendre interactive.
@@ -37,8 +42,8 @@ Une application hyperapp prend 4 paramètres:
  * vos imports en conséquence pour savoir ce que vous utilisez pour render l'app.
  */
 app(
-  exercice2State,
-  exampleActions,
-  exercice2View,
+  exercice3State,
+  exercice3Actions,
+  exercice3View,
   document.body
 )
