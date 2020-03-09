@@ -1,6 +1,7 @@
 import { app } from 'hyperapp'
 // import logger from '@hyperapp/logger'
 
+/*
 // Examples
 import exampleActions from './example/actions'
 import exampleState from './example/state'
@@ -17,6 +18,12 @@ import exercice2View from './ex2/components/views/ExerciseTwoView'
 import exercice3Actions from './ex3/actions'
 import exercice3State from './ex3/state'
 import exercice3View from './ex3/components/views/ExerciseThreeView'
+*/
+
+// Ex4
+import exercice4Actions from './ex4/actions'
+import exercice4State from './ex4/state'
+import exercice4View from './ex4/components/views/ExerciseFourView'
 
 /*
 La fonction app est la fonction qui sert à dessiner l'application javascript sur le navigateur
@@ -42,8 +49,8 @@ Une application hyperapp prend 4 paramètres:
  * vos imports en conséquence pour savoir ce que vous utilisez pour render l'app.
  */
 app(
-  exercice3State,
-  exercice3Actions,
-  exercice3View,
+  exercice4State,
+  exercice4Actions,
+  exercice4View,
   document.body
 )

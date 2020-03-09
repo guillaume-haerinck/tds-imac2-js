@@ -1,3 +1,8 @@
 import { h } from 'hyperapp'
 
-export default (/* state */) => null
+import IdCard from '../IdCard'
+
+export default (state) => 
+    h('main', null, [
+        IdCard(state.person)
+    ])
